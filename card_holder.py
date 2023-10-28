@@ -1,5 +1,4 @@
 import time
-from ui_imagedialog import Ui_SubWindow
 
 
 class Card:
