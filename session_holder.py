@@ -3,11 +3,12 @@ import random
 import sys
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QApplication, QDialog, QWidget, QVBoxLayout
+from PyQt6.QtCore import QThread
 from ui_imagedialog import Ui_SubWindow
 
 
 class Session:
-    def __init__(self,window, app, all_cards: dict, mode="all") -> None:
+    def __init__(self, window, app, all_cards: dict, mode="all") -> None:
         self.mode = mode
         self.all_cards = all_cards
         self.session_cards = {}
@@ -88,10 +89,10 @@ cards until you answer all of them right\n
         self.ui = Ui_SubWindow()
         self.ui.setupUi(self.new_window)
         self.new_window.show()
-        #add this into the event loop
+        tread = QThread()
+        tread.start()
         self.ui.textBrowser.setText(self.current_card.show())
         self.ui.pushButton.clicked.connect(self.remembered)
         self.ui.pushButton_2.clicked.connect(self.show_answer)
         self.ui.pushButton_3.clicked.connect(self.keep_showing)
-        self.show_answer()
-        #add this into the event loop
+        tread.exec()
