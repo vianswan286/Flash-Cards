@@ -1,1 +1,1 @@
-{"Koshi": {"front": "Who is Koshi?", "back": "Scientist", "history": []}, "Man": {"front": "Who is a man?", "back": "Just human", "history": []}}
+{"Koshi": {"front": "Who is Koshi?", "back": "Scientist", "history": [{"time": 1698505535, "result": "passed"}]}, "Man": {"front": "Who is a man?", "back": "Just human", "history": [{"time": 1698505391, "result": "passed"}, {"time": 1698505540, "result": "passed"}]}}
